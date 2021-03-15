@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="{% static 'css/index.css' %}" rel="stylesheet"/>
+</head>
+<body>
+    {{ddd.0.name}}
+    {% if ddd.0.name != "bat" %}
+        <a href = "#" class=" " >{{ddd.0.name}}</a>
+    {% endif %}
+        {% for b in ddd %}				
+                <p >{{b.name}}</p>							
+        {% endfor %}
+        <img class="image1" src="{% static 'img/i1.svg' %}">
+</body>
+</html>
